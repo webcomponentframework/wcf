@@ -1,0 +1,3 @@
+- [ ] Bake in some sort of global state solution
+    - [x] Look into making it accessible through `super.state()` or if that isn't how super works
+        - `super.state()` didn't work, but it was possible to make it [a static field like so](https://codepen.io/gingerchew/pen/wvVbKoZ/69cf75a611116639f321f0c00ccb928c).
