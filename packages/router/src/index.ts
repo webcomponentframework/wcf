@@ -1,4 +1,5 @@
-import { WCFBase } from "../../base/src";
+import { WCFBase } from "@wcf/base";
+
 const p = new DOMParser();
 export class WCFRouter extends WCFBase {
 
