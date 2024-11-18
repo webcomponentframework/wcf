@@ -10,8 +10,5 @@ export default defineConfig({
             name: 'wcf-helmet',
             fileName: 'index'
         }
-    },
-    test: {
-
     }
 })
