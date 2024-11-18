@@ -1,0 +1,23 @@
+{
+  "name": "wcf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:cli": "jiti src/cli/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@clack/prompts": "^0.8.1",
+    "picocolors": "^1.1.1",
+    "vite": "^5.4.11"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "jiti": "^2.4.0",
+    "vitest": "^2.1.5"
+  }
+}
