@@ -7,7 +7,7 @@ export default defineConfig({
         target: 'ES2020',
         lib: {
             entry: 'src/index.ts',
-            name: 'wcf-helmet',
+            name: 'c-helmet',
             fileName: 'index'
         }
     }

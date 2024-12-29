@@ -1,12 +1,12 @@
-# WCF - Web Component Framework
+# Cosmo - Web Component Framework
 
 A framework of components that can help fill the "framework gap"
 
 ## Includes
 
-- `@wcf/base`: A base element that all other WCF elements start from
-- `@wcf/helmet`: An element to help manage what goes on in the head, inspired by react-helmet
-- `@wcf/router`: A simple router/link prefetching solution
+- `@bycosmo/base`: A base element that all other Cosmo elements start from
+- `@bycosmo/helmet`: An element to help manage what goes on in the head, inspired by react-helmet
+- `@bycosmo/router`: A simple router/link prefetching solution
 
 ## Status
 

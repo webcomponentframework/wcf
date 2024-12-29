@@ -38,7 +38,7 @@ export class CRouter extends CBase {
         const dom = p.parseFromString(html, 'text/html');
 
         const router = dom.querySelector(CRouter.name);
-        if (!router) throw new Error('Could not find a matching WCFRouter instance on the page.');
+        if (!router) throw new Error('Could not find a matching CRouter instance on the page.');
 
         /**
          * Cleans up event listeners befor wiping out innerHTML

@@ -1,18 +1,18 @@
 // @vitest-environment jsdom
-import { WCFBase } from "../src";
+import { CBase } from "../src";
 import { it, describe, expect } from 'vitest';
 
-describe('@wcf/base', () => {
+describe('@bycosmo/base', () => {
     it('should generate a valid element name', () => {
-        class WCFNameCheck extends WCFBase {};
-        expect(WCFNameCheck.getName()).toBe('wcf-name-check');
+        class CNameCheck extends CBase {};
+        expect(CNameCheck.getName()).toBe('c-name-check');
     });
 
     it('should define custom elements', () => {
-        class WCFShouldDefine extends WCFBase {};
+        class CShouldDefine extends CBase {};
 
-        WCFShouldDefine.define();
-        const gottenEl = customElements.get(WCFShouldDefine.getName());
-        expect(gottenEl).toBe(WCFShouldDefine);
+        CShouldDefine.define();
+        const gottenEl = customElements.get(CShouldDefine.getName());
+        expect(gottenEl).toBe(CShouldDefine);
     })
 })

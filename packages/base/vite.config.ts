@@ -6,7 +6,7 @@ export default defineConfig({
         target: 'ES2020',
         lib: {
             entry: 'src/index.ts',
-            name: 'wcf-base',
+            name: 'c-base',
             fileName: 'index'
         }
     }
