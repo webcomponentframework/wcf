@@ -1,5 +1,5 @@
 {
-  "name": "router",
+  "name": "@bycosmo/router",
   "version": "1.0.0",
   "description": "",
   "main": "src/index.ts",
@@ -16,7 +16,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@wcf/base": "workspace:*",
+    "@bycosmo/base": "workspace:*",
     "vite": "^5.4.11"
   },
   "devDependencies": {

@@ -1,5 +1,5 @@
 {
-  "name": "@wcf/helmet",
+  "name": "@bycosmo/helmet",
   "version": "1.0.0",
   "description": "",
   "type": "module",
@@ -13,7 +13,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@wcf/base": "workspace:*",
+    "@bycosmo/base": "workspace:*",
     "vite": "^5.4.11"
   },
   "devDependencies": {

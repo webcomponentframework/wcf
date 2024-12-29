@@ -1,10 +1,10 @@
-import { WCFBase } from '@wcf/base';
+import { CBase } from '@bycosmo/base';
 
 type ValidTags = HTMLTitleElement|HTMLBaseElement|HTMLLinkElement|HTMLScriptElement|HTMLMetaElement|HTMLStyleElement
 type PotentiallyValidTags = HTMLElement|ValidTags
 
 
-export class WCFHelmet extends WCFBase {
+export class CHelmet extends CBase {
 	static els = new WeakSet<ValidTags>();
 	
     constructor() {
@@ -40,7 +40,7 @@ export class WCFHelmet extends WCFBase {
 	
 	track(el: ValidTags) {
 		el.dataset.fromHelmet = 'true';
-		WCFHelmet.els.add(el);
+		CHelmet.els.add(el);
 	}
 	
 	replaceIfExists(el:ValidTags, search: string) {

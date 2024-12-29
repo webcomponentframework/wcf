@@ -45,7 +45,7 @@ importers:
 
   packages/helmet:
     dependencies:
-      '@wcf/base':
+      '@bycosmo/base':
         specifier: workspace:*
         version: link:../base
       vite:
@@ -61,7 +61,7 @@ importers:
 
   packages/router:
     dependencies:
-      '@wcf/base':
+      '@bycosmo/base':
         specifier: workspace:*
         version: link:../base
       vite:

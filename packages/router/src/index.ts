@@ -1,7 +1,7 @@
-import { WCFBase } from "@wcf/base";
+import { CBase } from "@bycosmo/base";
 
 const p = new DOMParser();
-export class WCFRouter extends WCFBase {
+export class CRouter extends CBase {
     signals: WeakMap<HTMLAnchorElement, AbortController>;
     urls: Set<string>;
 
@@ -37,7 +37,7 @@ export class WCFRouter extends WCFBase {
 
         const dom = p.parseFromString(html, 'text/html');
 
-        const router = dom.querySelector(WCFRouter.name);
+        const router = dom.querySelector(CRouter.name);
         if (!router) throw new Error('Could not find a matching WCFRouter instance on the page.');
 
         /**

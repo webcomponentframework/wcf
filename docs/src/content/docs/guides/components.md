@@ -1,14 +1,14 @@
 ---
 title: Components
-description: Learn more about the components included in the WebComponentFramework
+description: Learn more about the components included in the Cosmo Framework
 ---
 
 ## Available
 
-- [`<wcf-base>`](guides/base)
-- [`<wcf-helmet>`](guides/helmet)
-- [`<wcf-router>`](guides/router)
+- [`<c-base>`](guides/base)
+- [`<c-helmet>`](guides/helmet)
+- [`<c-router>`](guides/router)
 
 ## Todo
 
-- `<wcf-state>`
+- `<c-state>`
