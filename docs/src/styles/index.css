@@ -1,0 +1,16 @@
+
+
+:root {
+    /* Think space age terminal from the 80's, orange and black, harsh contrast lol */
+    --cosmo-hue-orange: 29.25;/* hsl(29.25,100%,50%);*/
+    --cosmo-black: hsl(237, 82%, 4%);
+    --sl-hue-orange: var(--cosmo-hue-orange);
+    --sl-color-orange-low: hsl(var(--sl-hue-orange), 75%, 22%);
+    --sl-color-orange: hsl(var(--sl-hue-orange), 100%, 50%);
+    --sl-color-orange-high: hsl(var(--sl-hue-orange), 100%, 75%);
+    --sl-color-white: var(--sl-color-orange);
+
+    --sl-color-accent-low: var(--sl-color-orange-low);
+    --sl-color-accent: var(--sl-color-orange);
+    --sl-color-accent-high: var(--sl-color-orange-high);
+}
