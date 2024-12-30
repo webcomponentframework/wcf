@@ -2,15 +2,31 @@
 
 :root {
     /* Think space age terminal from the 80's, orange and black, harsh contrast lol */
-    --cosmo-hue-orange: 29.25;/* hsl(29.25,100%,50%);*/
-    --cosmo-black: hsl(237, 82%, 4%);
+    --cosmo-hue-orange: 51.112;
+    --cosmo-orange: oklch(73.645% 0.19702 var(--cosmo-hue-orange));
+    --cosmo-black: oklch(11.01% 0.0403 271.94);
     --sl-hue-orange: var(--cosmo-hue-orange);
-    --sl-color-orange-low: hsl(var(--sl-hue-orange), 75%, 22%);
-    --sl-color-orange: hsl(var(--sl-hue-orange), 100%, 50%);
-    --sl-color-orange-high: hsl(var(--sl-hue-orange), 100%, 75%);
+    --sl-color-orange-low: oklch(55.645% 0.19702 var(--cosmo-hue-orange));
+    --sl-color-orange: var(--cosmo-orange);
+    --sl-color-orange-high: oklch(93.645% 0.19702 var(--cosmo-hue-orange));
     --sl-color-white: var(--sl-color-orange);
 
     --sl-color-accent-low: var(--sl-color-orange-low);
     --sl-color-accent: var(--sl-color-orange);
     --sl-color-accent-high: var(--sl-color-orange-high);
+    --sl-color-text-accent: var(--sl-color-accent);
+    --sl-color-bg-sidebar:var(--cosmo-black);
+    --sl-color-bg-nav: var(--cosmo-black);
+    --sl-color-bg: var(--cosmo-black);
+    --sl-color-text-invert: var(--cosmo-black);
+}
+
+a {
+    color: var(--sl-color-gray-1);
+    font-weight: 600;
+}
+
+.large {
+    font-weight: 800;
+    letter-spacing: -0.025em;
 }

@@ -21,6 +21,7 @@ export default defineConfig({
 				{
 					label: 'Components',
 					items: [
+						{ label: 'Full List', slug: 'guides/components'},
 						// Each item here is one entry in the navigation menu.
 						{ label: 'Base', slug: 'guides/base' },
 						{ label: 'Helmet', slug: 'guides/helmet' },
