@@ -75,6 +75,22 @@ importers:
         specifier: ^2.1.5
         version: 2.1.5(@types/node@22.9.0)(jsdom@25.0.1(bufferutil@4.0.8)(utf-8-validate@5.0.10))
 
+  packages/state:
+    dependencies:
+      '@wcf/base':
+        specifier: workspace:*
+        version: link:../base
+      vite:
+        specifier: ^5.4.11
+        version: 5.4.11(@types/node@22.9.0)
+    devDependencies:
+      jsdom:
+        specifier: ^25.0.1
+        version: 25.0.1(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      vitest:
+        specifier: ^2.1.5
+        version: 2.1.5(@types/node@22.9.0)(jsdom@25.0.1(bufferutil@4.0.8)(utf-8-validate@5.0.10))
+
 packages:
 
   '@aashutoshrathi/word-wrap@1.2.6':
