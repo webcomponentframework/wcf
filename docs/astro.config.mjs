@@ -15,7 +15,8 @@ export default defineConfig({
 					label: 'About Cosmo',
 					items: [
 						{ label: 'What is it?', slug: 'about/what-is-cosmo' },
-						{ label: 'Compiler', slug: 'about/compiler'}
+						{ label: 'Compiler', slug: 'about/compiler' },
+						{ label: "What about...", slug: 'about/what-about' }
 					]
 				},
 				{
