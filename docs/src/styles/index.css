@@ -6,19 +6,22 @@
     --cosmo-orange: oklch(73.645% 0.19702 var(--cosmo-hue-orange));
     --cosmo-black: oklch(11.01% 0.0403 271.94);
     --sl-hue-orange: var(--cosmo-hue-orange);
-    --sl-color-orange-low: oklch(55.645% 0.19702 var(--cosmo-hue-orange));
+    --sl-color-orange-low: oklch(55.645% 0.15702 var(--cosmo-hue-orange));
     --sl-color-orange: var(--cosmo-orange);
     --sl-color-orange-high: oklch(93.645% 0.19702 var(--cosmo-hue-orange));
     --sl-color-white: var(--sl-color-orange);
-
+    --sl-color-black: var(--cosmo-black);
     --sl-color-accent-low: var(--sl-color-orange-low);
     --sl-color-accent: var(--sl-color-orange);
-    --sl-color-accent-high: var(--sl-color-orange-high);
+    --sl-color-accent-high: var(--sl-color-orange);
     --sl-color-text-accent: var(--sl-color-accent);
     --sl-color-bg-sidebar:var(--cosmo-black);
     --sl-color-bg-nav: var(--cosmo-black);
     --sl-color-bg: var(--cosmo-black);
     --sl-color-text-invert: var(--cosmo-black);
+    --sl-color-hairline-shade: var(--cosmo-orange);
+    --sl-color-hairline: var(--cosmo-orange);
+    --sl-color-hairline-light: var(--cosmo-orange);
 }
 
 a {
@@ -29,4 +32,13 @@ a {
 .large {
     font-weight: 800;
     letter-spacing: -0.025em;
+}
+
+.right-sidebar {
+    border-inline-start-color: var(--cosmo-orange);
+}
+
+.pagination-links a {
+    border-radius: 0;
+    border-color: var(--sl-color-orange-low);
 }
