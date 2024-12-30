@@ -1,0 +1,12 @@
+<blockquote class="blockquote">
+    <slot></slot>
+</blockquote>
+<style is:global>
+    .sl-markdown-content blockquote:not(:where(.not-content *)) {
+        background-color: var(--sl-color-gray-6);
+        color: var(--sl-color-white);
+        padding: 1rem;
+        border-radius: 1ch;
+        border-inline-start: 1px solid var(--sl-color-gray-4);
+    }
+</style>

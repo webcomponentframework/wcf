@@ -12,6 +12,13 @@ export default defineConfig({
 			},
 			sidebar: [
 				{
+					label: 'About Cosmo',
+					items: [
+						{ label: 'What is it?', slug: 'about/what-is-cosmo' },
+						{ label: 'Compiler', slug: 'about/compiler'}
+					]
+				},
+				{
 					label: 'Components',
 					items: [
 						// Each item here is one entry in the navigation menu.

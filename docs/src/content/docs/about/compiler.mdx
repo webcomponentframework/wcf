@@ -1,0 +1,91 @@
+---
+title: What does the compiler do?
+---
+
+import Blockquote from '../../../components/Blockquote.astro';
+
+<Blockquote>Much of the work that needs to be done on the compiler has not started. If you are familiar with languages like Go/Rust/Zig and want to join the conversation, please check out the repo [on GitHub](https://github.com/bycosmo/compiler).</Blockquote>
+
+## `.cosmo` files
+
+To facilitate better development experience, the Cosmo framework uses `.cosmo` files. If you have developed with Astro before, these should look very familiar.
+
+```astro
+---
+// my-fancy-title.cosmo
+// This is typescript that is run entirely on the server
+const useThisInTemplate = 'inserting data from the server'
+---
+
+<h1>This is html that is rendered and is {useThisInTemplate} to create a great DX experience<h1>
+<style>
+    /* This is bundled using Vite */
+    h1 {
+        font-size: 3rem;
+    }
+</style>
+<script>
+    console.log('This code runs on connectedCallback');
+</script>
+```
+
+While Cosmo is still in it's beginning stages, things like "what does the JS in the script tag do?" may change. For now, it is the code that will run on connectedCallback. That means that inside that script, `this` is the same as the current custom element.
+
+Taking the code from above as an example, the compiler will output code similar to this:
+
+```js
+import { CBase } from '@bycosmo/base';
+
+// name of component is derived from the file name
+// my-fancy-title -> MyFancyTitle
+// MyFancyTitle -> MyFancyTitle
+export class MyFancyTitle extends CBase {
+    constructor() {
+        super();
+        const styles = new CSSStyleSheet();
+        styles.replaceSync(`h1{font-size:3rem}`);
+        this.shadowRoot.adoptedStyleSheets.push(styles);
+        // Dealing with the JSX-style string interpolation hasn't been decided yet
+        // but the goal is to make it available using DeclarativeShadowDOM
+    }
+    connectedCallback() {
+        console.log('This code runs on connectedCallback');
+    }
+}
+MyFancyTitle.define();
+```
+
+Then in your `pages/` directory:
+
+```astro
+---
+// pages/index.cosmo
+import { MyFancyTitle } from '../components/my-fancy-title.cosmo';
+---
+
+<!DOCTYPE html>
+<html>
+    <body>
+        <!-- Because we are using a compiler, this JSX-like syntax is totally valid -->
+        <MyFancyTitle />
+    </body>
+</html>
+```
+
+Will be run through the compiler and converted into:
+
+```html
+<!DOCTYPE html>
+<html>
+    <body>
+        <my-fancy-title>
+            <!-- shadowrootmode defaults to open, this should be configurable with an export later -->
+            <template shadowrootmode="open">
+                <h1>This is html that is rendered and is inserting data from the server to create a great DX experience<h1>
+            </template>
+        </my-fancy-title>
+    </body>
+</html>
+```
+
+[You can read more about the compiler here](https://github.com/bycosmo/compiler)
